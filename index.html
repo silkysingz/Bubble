@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawSeriesChart);
+
+    function drawSeriesChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Region', 'Year', 'Population', 'Area/Sq. km', 'Density (persons per Sq km)'],
+        ['Banjul', 1973, 39179, 12.23, 3204],
+        ['Banjul', 1983, 44188, 3, 3613],
+        ['Banjul', 1993, 42326, 3, 3461],
+        ['Banjul', 2003, 35061, 2.867, 2867],
+        ['Kanifing', 1973, 39404, 75.55, 522],
+        ['Kanifing', 1983, 101504, 522, 1344],
+        ['Kanifing', 1993, 228214, 1344, 3021],
+        ['Kanifing', 2003, 322735, 3021, 4272],
+        ['Brikama', 1973, 91013, 1764.25, 52],
+        ['Brikama', 1983, 137245, 78, 78],
+        ['Brikama', 1993, 234917, 133, 133],
+        ['Brikama', 2003, 389594, 221, 221],
+        ['Mansakonko', 1973, 42447, 1618, 26],
+        ['Mansakonko', 1983, 55263, 34, 34],
+        ['Mansakonko', 1993, 65146, 40, 40],
+        ['Mansakonko', 2003, 72167, 45, 45],
+        ['Kerewan', 1973, 93338, 2255.5, 41],
+        ['Kerewan', 1983, 112225, 50, 50],
+        ['Kerewan', 1993, 156462, 69, 69],
+        ['Kerewan', 2003, 172835, 77, 77],
+        ['Kuntaur', 1973, 47669, 1466.5, 33],
+        ['Kuntaur', 1983, 57594, 39, 39],
+        ['Kuntaur', 1993, 67774, 46, 46],
+        ['Kuntaur', 2003, 78491, 54, 54],
+        ['Janjangbureh', 1973, 54232, 1427.75, 38],
+        ['Janjangbureh', 1983, 68410, 48, 48],
+        ['Janjangbureh', 1993, 88247, 62, 62],
+        ['Janjangbureh', 2003, 107212, 75, 75],
+        ['Basse', 1973, 86167, 2069.5, 42],
+        ['Basse', 1983, 111388, 54, 54],
+        ['Basse', 1993, 155059, 75, 75],
+        ['Basse', 2003, 182586, 88, 88],
+      ]);
+
+      var options = {
+        title: 'Population, Area, and Density of Gambian Regions (1973-2003)',
+        hAxis: {title: 'Year'},
+        vAxis: {title: 'Population'},
+        bubble: {textStyle: {fontSize: 11}},
+        legend: { position: 'top' }
+      };
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+  </head>
+  <body>
+    <div id="series_chart_div" style="width: 100%; height: 100%;"></div>
+  </body>
+</html>
+
+
+
+
+
